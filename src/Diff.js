@@ -41,22 +41,62 @@
  *
 */
 
-function WikiDiff3(tooLong, powLimit) {
-	// Set tooLong and powLimit if undefined
-	tooLong = typeof tooLong !== 'undefined' ? tooLong : 2000000;
-	powLimit = typeof powLimit !== 'undefined' ? powLimit : 1.45;
+var DaisyJS = (function (djs) {
+	djs.WikiDiff3 = function(tooLong, powLimit) {
+		// set default values for parameters
+		tooLong = typeof tooLong !== "undefined" ? tooLong : 2000000;
+		powLimit = typeof powLimit !== "undefined" ? powLimit : 1.45;
 
-	// Input variables (private)
-	var tooLong = tooLong, powLimit = powLimit, from, to, m, n;
+		// Input variables (private)
+		var from, to, m, n;
+		this.tooLong = tooLong, this.powLimit = powLimit; 
 
-	// State variables (private)
-	var maxDifferences, lcsLengthCorrectedForHeuristic;
+		// State variables (private)
+		var maxDifferences, lcsLengthCorrectedForHeuristic;
 
-	// Output variables (public)
-	this.length;
-	this.removed;
-	this.added;
-	this.heuristicUsed;
+		// Output variables (public)
+		this.length = '', this.removed = '', this.added = '', this.heuristicUsed = '';
 
+		function diff_range(from_lines, to_lines) {
 
-}
+		};
+
+		function lcs_rec(bottoml1, topl1, bottoml2, topl2, V, snake) {
+
+		};
+
+		function find_middle_snake(bottoml1, topl1, bottoml2, topl2, V, snake) {
+
+		};
+
+		function findMostProgress(M, N, limit, V) {
+
+		};
+	};
+
+	djs.WikiDiff3.prototype.diff = function(from, to) {
+
+	};
+
+	djs.WikiDiff3.prototype.getLcsLength = function() {
+
+	};
+
+	/**
+	 * Alternative representation of a set of changes, by the index
+	 * ranges that are changed.
+	 *
+     */
+
+    // Definition Complete
+	djs.RangeDifference = function(leftstart, leftend, rightstart, rightend) {
+		this.leftstart = leftstart,
+		this.leftend = leftend,
+		this.leftlength = leftend - leftstart,
+		this.rightstart = rightstart,
+		this.rightend = rightend,
+		this.rightlength = rightend - rightstart;
+	}
+
+	return djs;
+}(DaisyJS || {}));
