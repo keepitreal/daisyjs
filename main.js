@@ -2,8 +2,8 @@ requirejs.config({
 	baseUrl: 'src'
 });
 
-require(["HTMLDiffer"], function(HTMLDiffer) {
-	var diff = new HTMLDiffer();
+require(["HTMLDiffer", "TagNode"], function(HTMLDiffer, TagNode) {
+	var tagNode = new TagNode("chris", "Bill", {"fruit":"apply","color":"orangey","flavor":"grapey", "style":"modern"});
 
-	diff.htmlDiff("darion", "noirad");
+	console.log(tagNode.parent);
 });
