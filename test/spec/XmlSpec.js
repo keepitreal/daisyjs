@@ -1,5 +1,5 @@
 define(['js/Xml'], function(Xml) {
-	describe("The XML Class", function() {
+	describe("The XML class", function() {
 		// Xml.element
 		describe("contains a method called element that", function() {
 			it("will return a basic XML element when only one argument is passed.", function() {

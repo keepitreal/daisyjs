@@ -22,6 +22,8 @@ requirejs.config({
 });
 
 var specs = [
+	'test/NodeSpec',
+	'test/TagNodeSpec',
 	'test/XmlSpec'
 ];
 

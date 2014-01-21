@@ -9,6 +9,7 @@ define(["js/LastCommonParentResult"], function(LastCommonParentResult) {
 		this.parent = parent;
 		this.whiteBefore = false;
 		this.whiteAfter = false;
+		this.parentTree;
 	}
 
 	Node.prototype.getParentTree = function() {
