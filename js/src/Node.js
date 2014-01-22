@@ -6,12 +6,14 @@ define(["js/LastCommonParentResult"], function(LastCommonParentResult) {
 	 */
 
 	function Node(parent) {
-		this.parent = parent;
+		this.parent = typeof parent !== 'undefined' ? parent : null;
 		this.whiteBefore = false;
 		this.whiteAfter = false;
-		this.parentTree;
 	}
 
+	/**
+	 * Climbs the DOM and creates an array of parent nodes
+	 */
 	Node.prototype.getParentTree = function() {
 		if(typeof this.parentTree === "undefined") {
 			if (this.parent !== null) {
@@ -21,7 +23,7 @@ define(["js/LastCommonParentResult"], function(LastCommonParentResult) {
 				this.parentTree = [];
 			}
 		}
-		return this.parentTree;
+		return this.parentTree.slice();
 	}
 
 	Node.prototype.getLastCommonParent = function(other) {
