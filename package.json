@@ -1,0 +1,39 @@
+{
+  "name": "daisyjs",
+  "version": "1.0.0",
+  "description": "Typescript port of the DaisyDiff library, used to produce visual diffs of rich-text (DOM)",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "npm run build",
+    "build": "npm run build-src && npm run build-test",
+    "build-src": "browserify ./src/ts/main.js -o ./dist/bundle.js",
+    "build-test": "browserify ./test/SpecRunner.js -o ./test/bundle.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/keepitreal/daisyjs.git"
+  },
+  "keywords": [
+    "html diff",
+    "dom diff"
+  ],
+  "author": "Darion Welch",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/keepitreal/daisyjs/issues"
+  },
+  "homepage": "https://github.com/keepitreal/daisyjs",
+  "devDependencies": {
+    "assert": "^1.3.0",
+    "browserify": "^10.2.4",
+    "gulp": "^3.9.0",
+    "gulp-tsc": "^0.10.0",
+    "gulp-tsd": "0.0.4",
+    "jasmine": "^2.3.1",
+    "vinyl-source-stream": "^1.1.0",
+    "vows": "^0.8.1"
+  }
+}
