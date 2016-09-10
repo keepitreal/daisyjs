@@ -1,10 +1,10 @@
-/// <reference path="../../references.d.ts" />
+import IDomNode from '../DomNode/DomNode';
+import TagNode from '../TagNode/TagNode';
 
-import TagNode = require('../TagNode/TagNode');
+export default class BodyNode {
 
-class BodyNode {
-    
-	
 }
 
-export = BodyNode;
+export interface IBodyNode extends IDomNode {
+
+}

@@ -1,19 +1,15 @@
-/// <reference path="../../references.d.ts" />
+import BodyNode from '../BodyNode/BodyNode';
 
-import BodyNode = require('../BodyNode/BodyNode');
-
-class DomTreeBuilder {
+export default class DomTreeBuilder {
 	bodyNode = this.currentParent = new BodyNode();
 	bodyStarted = false;
 	bodyEnded = false;
 	textNodes = [];
-	
+
 	private notInPre = true;
 	private newWord = ''
 	private whiteSpaceBeforeThis = true
 	private currentParent: any;
-	
+
 	// leaving off here to write BodyNode and DummyNode
 }
-
-export = DomTreeBuilder;

@@ -1,4 +1,4 @@
-var TagNode = require('../../src/js/TagNode');
+import TagNode from '../../src/js/TagNode';
 
 describe("The TagNode class", function() {
 	describe("when instantiated", function() {

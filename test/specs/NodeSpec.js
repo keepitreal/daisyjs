@@ -1,4 +1,4 @@
-var Node = require('../../src/js/Node');
+import Node from '../../src/js/Node';
 
 describe("The Node class", function() {
 	describe("when instantiated", function() {

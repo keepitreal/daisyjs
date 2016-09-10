@@ -1,6 +1,4 @@
-/// <reference path="../../references.d.ts" />
-
-class Utils {
+export default class Utils {
 	public static htmlSpecialChars(text) {
 		return text
 			.replace(/&/g, "&amp;")
@@ -9,6 +7,16 @@ class Utils {
 			.replace(/"/g, "&quot;")
 			.replace(/'/g, "&#039;");
 	}
-}
 
-export = Utils;
+	public static isUndefined(val) {
+		return typeof val === "undefined";
+	}
+
+	public static isNull(val) {
+		return val === null;
+	}
+
+	public static isEmpty(val) {
+		return this.isUndefined(val) || this.isNull(val);
+	}
+}

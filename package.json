@@ -7,6 +7,7 @@
     "test": "test"
   },
   "scripts": {
+    "ts": "tsconfig && tsc -p .",
     "test": "npm run build",
     "build": "npm run build-src && npm run build-test",
     "build-src": "browserify ./src/ts/main.js -o ./dist/bundle.js",
@@ -33,6 +34,8 @@
     "gulp-tsc": "^0.10.0",
     "gulp-tsd": "0.0.4",
     "jasmine": "^2.3.1",
+    "source-map-loader": "^0.1.5",
+    "ts-loader": "^0.8.2",
     "vinyl-source-stream": "^1.1.0",
     "vows": "^0.8.1"
   }

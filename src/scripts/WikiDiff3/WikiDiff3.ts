@@ -1,7 +1,3 @@
-/// <reference path="../../references.d.ts" />
+export default class WikiDiff3 {
 
-class WikiDiff3 {
-    
 }
-
-export = WikiDiff3;
