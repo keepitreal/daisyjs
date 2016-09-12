@@ -1,9 +1,9 @@
-import Node from '../../src/js/Node';
+import DomNode from '../src/scripts/DomNode/DomNode';
 
 describe("The Node class", function() {
 	describe("when instantiated", function() {
 		it("should instantiate parent, whiteBefore, whiteAfter and parentTree", function() {
-			var node = new Node("name");
+			var node = new DomNode("name");
 			expect(node.parent).toEqual("name");
 			expect(node.whiteBefore).toEqual(false);
 			expect(node.whiteAfter).toEqual(false);
@@ -12,9 +12,9 @@ describe("The Node class", function() {
 
 	// Node.prototype.getParentTree()
 	describe("contains a public method getParentTree() that", function() {
-		var node1 = new Node();
-		var node2 = new Node(node1);
-		var node3 = new Node(node2);
+		var node1 = new DomNode();
+		var node2 = new DomNode(node1);
+		var node3 = new DomNode(node2);
 
 		node3.getParentTree();
 

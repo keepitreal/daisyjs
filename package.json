@@ -8,7 +8,8 @@
   },
   "scripts": {
     "ts": "tsconfig && tsc -p .",
-    "test": "npm run build",
+    "test": "karma start",
+    "start": "webpack-dev-server",
     "build": "npm run build-src && npm run build-test",
     "build-src": "browserify ./src/ts/main.js -o ./dist/bundle.js",
     "build-test": "browserify ./test/SpecRunner.js -o ./test/bundle.js"
@@ -19,7 +20,8 @@
   },
   "keywords": [
     "html diff",
-    "dom diff"
+    "dom diff",
+    "rich text diff"
   ],
   "author": "Darion Welch",
   "license": "MIT",
@@ -34,6 +36,12 @@
     "gulp-tsc": "^0.10.0",
     "gulp-tsd": "0.0.4",
     "jasmine": "^2.3.1",
+    "karma": "^1.3.0",
+    "karma-jasmine": "^1.0.2",
+    "karma-phantomjs-launcher": "^1.0.2",
+    "karma-typescript-preprocessor2": "^1.2.1",
+    "karma-webpack": "^1.8.0",
+    "phantomjs-prebuilt": "^2.1.12",
     "source-map-loader": "^0.1.5",
     "ts-loader": "^0.8.2",
     "vinyl-source-stream": "^1.1.0",

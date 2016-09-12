@@ -42,17 +42,12 @@ export default class Xml {
      * Return null if no attributes given.
      * @param attribs Object of attributes for an XML element
      */
-    public static expandAttributes = function (attribs) {
+    public static expandAttributes = function (attribs= {}) {
         let out = '';
 
-        if (attribs instanceof Object) {
-            /// TODO: add has own property
-            for (var key in attribs) {
-                out += " " + key + "=\"" + attribs[key] + '"';
-            }
-        }
-
-        return out;
+        return Object.keys(attribs).reduce((prev, key) => {
+            return prev += " " + key + "=\"" + attribs[key] + '"';
+        }, '');
     }
 
     public static elementClean = function (element, attribs, contents) { }
@@ -65,7 +60,13 @@ export default class Xml {
      * @return string
      */
     public static openElement = function (element, attribs?) {
-        return `<${element} ${this.expandAttributes(attribs)}>`;
+        var el = `<${element}`;
+
+        if (!Utils.isEmpty(attribs)) {
+            el += `${this.expandAttributes(attribs)}`
+        }
+
+        return el += '>';
     }
 
     /**
