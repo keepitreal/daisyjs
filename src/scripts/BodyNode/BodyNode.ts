@@ -5,8 +5,17 @@ export default class BodyNode extends TagNode {
     constructor() {
         super(null, 'body', {});
     }
-}
 
-export interface IBodyNode extends IDomNode {
+    public copyTree() {
+        let newThis = new BodyNode();
 
+        this.children.forEach((child: TagNode) => {
+            let newChild = child.copyTree();
+
+            newChild.setParent(newThis);
+            newChild.children.push(newChild);
+        });
+
+        return newThis;
+    }
 }

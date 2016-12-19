@@ -46,5 +46,8 @@
     "ts-loader": "^0.8.2",
     "vinyl-source-stream": "^1.1.0",
     "vows": "^0.8.1"
+  },
+  "dependencies": {
+    "htmldiff": "0.0.4"
   }
 }

@@ -1,3 +1,5 @@
+// class implementation complete
+
 export default class ChangeText {
     private txt = "";
 

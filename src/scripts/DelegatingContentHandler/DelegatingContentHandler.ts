@@ -1,6 +1,8 @@
 import Xml from '../Xml/Xml';
 import Utils from '../Utils/Utils';
 
+// Class implementation complete
+
 export default class DelegatingContentHandler {
     private delegate;
 
